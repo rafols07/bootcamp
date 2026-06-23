@@ -1,10 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: #7a9c7a;
+    background-color: #f5f7f5;
     color: #2d3a2d;
     text-align: center;
-    margin: 0;
+    line-height: 1.6;
+}
+
+header {
     padding: 40px 20px;
+    background: linear-gradient(135deg, #495d49, #5c825c);
+    color: white;
 }
 
 header h1 {
@@ -13,43 +24,70 @@ header h1 {
 }
 
 header p {
-    font-size: 0.95rem;
-    color: #4a5a4a;
+    font-size: 1rem;
+    color: #e8f0e8;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4ffd4;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.main .left {
+    max-width: 500px;
+    text-align: left;
 }
 
 section.about {
-    margin: 0;
-    padding: 60px 0;
-    color: #2d3a2d;
+    padding: 60px 20px;
     background: #495d49;
+    color: white;
     width: 100%;
 }
 
 section.skills {
-
-    margin: 0;
-    padding: 60px 0;
-    color: #2d3a2d;
+    padding: 60px 20px;
     background: #5c825c;
-
+    color: white;
 }
 
 section.contact {
-    margin: 0;
-    padding: 100px 0;
-    color: #1f351f;
+    padding: 100px 20px;
     background: #3e543e;
+    color: white;
 }
 
 h2 {
-    font-size: 1.8;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
 h3 {
-    font: size 2px;
-    ;
-    margin-top: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 img {
@@ -57,39 +95,46 @@ img {
     height: 200px;
     border-radius: 12px;
     object-fit: cover;
-    margin-top: 20px;
-
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 ul {
-    list-style-type: disc;
+    list-style-type: none;
     display: inline-block;
     text-align: left;
-    padding-left: 20px;
 }
 
 li {
-    margin: 8px 0;
+    margin: 12px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
 }
 
 form {
     text-align: left;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 30px auto 0;
 }
 
 label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #aaa;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
     border-radius: 5px;
     font-family: inherit;
-    background: white;
 }
 
 input[type="submit"] {
@@ -102,8 +147,14 @@ input[type="submit"] {
     font-size: 1rem;
     font-family: inherit;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 input[type="submit"]:hover {
     background: #6a8c6a;
+    transform: translateY(-2px);
+}
+
+html {
+    scroll-behavior: smooth;
 }
