@@ -4,54 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>RAFOLS MARIA PAUL | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1>My Portfolio</h1>
-        <p>Welcome to my portfolio page.<br>I am currently learning HTML & CSS.
-        </p>
+        <p>Welcome to my portfolio page.<br>I am currently learning HTML & CSS.</p>
+        <nav>
+            <ul>
+                 <li><a href="#home">Home</a></li>
+                 <li><a href="#about">About</a></li>
+                 <li><a href="#skills">Skills</a></li>
+                 <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="main">
-        <h2>RAFOLS MARIA PAUL</h2>
-        <p>I'm currently pursuing BTech Computer Science and Engineering at<br>MET's School of Engineering.</p>
-        <img src="image/developer.jpg">
+    <section id="home" class="main">
+        <div class="left">
+            <h2>RAFOLS MARIA PAUL</h2>
+            <p>I'm currently pursuing BTech Computer Science and Engineering at<br>MET's School of Engineering.</p>
+        </div>
+        <img src="image/developer.jpg" alt="Developer illustration">
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <h2>About</h2>
         <p>I’m a B.Tech student specializing in Computer Science and Engineering, passionate about solving real-world
             problems through code and innovative technology. Currently enhancing my skills through academic projects and
-            self-learning. I’m eager to contribute to challenging tech environments and learn from industry experts. I’m
-            also working on strengthening my profile through internships and collaborative tech communities.</p>
+            self-learning. I’m eager to contribute to challenging tech environments and learn from industry experts.</p>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <h3>Top Skills</h3>
         <ul>
             <li>Programming Languages: Python, Java, C++</li>
-            <li>Web Development: HTML</li>
+            <li>Web Development: HTML, CSS</li>
             <li>Database Management: MySQL</li>
             <li>Software Tools: Microsoft Office</li>
             <li>Mobile Development: Flutter</li>
         </ul>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <form>
-            <label for="name">Name :</label><br>
-            <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
 
-            <label for="email">Email :</label><br>
-            <input type="text" id="email" name="email" placeholder="Your Email"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
 
             <input type="submit" value="Send Message">
         </form>
     </section>
 </body>
-
 </html>
